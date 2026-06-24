@@ -8,7 +8,7 @@ The project aims to provide a centralized platform for improving safety, communi
 
 ## Live Demo
 
-https://safeher-dbzg.onrender.com
+https://safeher-dbzq.onrender.com/
 
 ## Features
 
