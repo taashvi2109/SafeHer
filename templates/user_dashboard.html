@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeHer Dashboard</title>
+   <link rel="stylesheet"  href="{{ url_for('static', filename='user_dashboard.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+           <div class="profile"
+     onclick="window.location.href='/profile'">
+
+    {{ first_letter }}
+
+</div>
+          <button class="logout-btn"
+        onclick="window.location.href='/'">
+
+    Logout
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h3>Menu</h3>
+
+            <button class="side-btn"
+                    onclick="window.location.href='/reportincident'">
+                    Report Incident
+            </button>
+
+            <button class="side-btn"
+                    onclick="window.location.href='/reportstatus'">
+                    View Report Status
+            </button>
+
+            <button class="side-btn"
+                    onclick="window.location.href='/feedback'">
+                    Give Feedback
+            </button>
+
+            <div class="helpline">
+
+                <h4>Emergency Helplines</h4>
+
+                 <p>181 - Women Helpline</p>
+
+                 <p>112 - Emergency</p>
+
+                <p>1091 - Women Police</p>
+
+            </div>
+
+        </div>
+
+        <!-- MAIN CONTENT -->
+
+        <div class="main-content">
+
+    
+               <h1>
+                    Welcome , {{ user_name }}
+                </h1>       
+          
+
+            
+
+            <!-- QUICK NOTE -->
+
+            <p class="quick-note">
+            “Stay alert, trust your instincts, and never hesitate to seek help when needed.”
+              </p>
+            <!-- ACTION BUTTONS -->
+
+            <div class="action-section">
+
+               <div class="menu-card"
+                    onclick="window.location.href='/reportincident'">
+                    Report Incident
+                </div>
+
+            <div class="menu-card"
+                    onclick="window.location.href='/reportstatus'">
+                     View Status
+            </div>
+
+            <div class="menu-card"
+                onclick="window.location.href='/feedback'">
+                Give Feedback
+            </div>
+            </div>
+           
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        SafeHer © 2026 | Empowering Women Through Technology
+    </footer>
+
+</body>
+</html>

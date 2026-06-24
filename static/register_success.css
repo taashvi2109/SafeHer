@@ -1,0 +1,144 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    background:#07152A;
+
+    color:white;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.success-container{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+}
+
+.success-card{
+
+    width:650px;
+
+    background:#0D203B;
+
+    border:1px solid #1F3A5F;
+
+    border-radius:18px;
+
+    padding:50px;
+
+    text-align:center;
+}
+
+.tick{
+
+    font-size:80px;
+
+    color:#4CAF50;
+
+    margin-bottom:20px;
+}
+
+.success-card h1{
+
+    margin-bottom:20px;
+
+    font-size:38px;
+}
+
+.message{
+
+    color:#BFC8D6;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+    font-size:17px;
+}
+
+.btn-group{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+}
+
+.login-btn{
+
+    background:#1F4E79;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+.login-btn:hover{
+
+    background:#2A659B;
+}
+
+.home-btn{
+
+    background:#2D3748;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+.home-btn:hover{
+
+    background:#4A5568;
+}
+
+footer{
+
+    text-align:center;
+
+    padding:15px;
+
+    background:#0D203B;
+
+    border-top:1px solid #1F3A5F;
+
+    color:#BFC8D6;
+}

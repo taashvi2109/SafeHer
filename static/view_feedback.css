@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#07152A;
+    color:white;
+}
+
+.navbar{
+
+    background:#0D203B;
+
+    padding:20px 50px;
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:bold;
+}
+
+.container{
+
+    padding:40px;
+}
+
+h1{
+
+    margin-bottom:25px;
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#0D203B;
+
+    border-radius:15px;
+
+    overflow:hidden;
+}
+
+th{
+
+    background:#142A4A;
+
+    padding:16px;
+
+    text-align:left;
+}
+
+td{
+
+    padding:16px;
+
+    border-top:1px solid #1F3A5F;
+}
+
+.back-btn{
+
+    margin-top:25px;
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.back-btn:hover{
+
+    background:#2A659B;
+}
+.sos-badge{
+
+    background:#ff0000;
+
+    color:white;
+
+    padding:10px 15px;
+
+    border-radius:25px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    animation:sosBlink 1s infinite;
+}
+
+@keyframes sosBlink{
+
+    0%{
+        box-shadow:0 0 5px red;
+    }
+
+    50%{
+        box-shadow:0 0 20px red;
+    }
+
+    100%{
+        box-shadow:0 0 5px red;
+    }
+}

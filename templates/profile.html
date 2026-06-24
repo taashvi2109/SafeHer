@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Profile</title>
+
+<link rel="stylesheet"  href="{{ url_for('static', filename='profile.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="logo">
+        SafeHer
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="profile-card">
+
+        <div class="avatar">
+    {{ user[0][0] }}
+</div>
+
+<h1>{{ user[0] }}</h1>
+        <div class="profile-row">
+    <span>Full Name</span>
+    <span>{{ user[0] }}</span>
+</div>
+
+<div class="profile-row">
+    <span>Date of Birth</span>
+    <span>{{ user[1] }}</span>
+</div>
+
+<div class="profile-row">
+    <span>Email</span>
+    <span>{{ user[2] }}</span>
+</div>
+
+<div class="profile-row">
+    <span>Phone</span>
+    <span>{{ user[3] }}</span>
+</div>
+
+<div class="profile-row">
+    <span>Address</span>
+    <span>{{ user[4] }}</span>
+</div>
+
+      <div class="buttons">
+
+    <button class="back-btn"
+            onclick="window.location.href='/dashboard'">
+
+        ← Dashboard
+
+    </button>
+
+    <button class="edit-btn"
+            onclick="window.location.href='/editprofile'">
+
+        Edit Profile
+
+    </button>
+
+</div>
+   
+
+</div>
+
+
+
+</body>
+
+</html>

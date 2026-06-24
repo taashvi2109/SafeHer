@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#07152A;
+    color:white;
+    min-height:100vh;
+}
+.navbar{
+
+    background:#0D203B;
+
+    padding:20px 50px;
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:bold;
+}
+
+.container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:calc(100vh - 180px);
+
+    padding:40px;
+}
+.profile-card{
+
+    width:620px;
+
+    background:#0D203B;
+
+    border:1px solid #1F3A5F;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    text-align:center;
+}
+
+.avatar{
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    background:#1F4E79;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+}
+
+.profile-card h1{
+
+    margin-bottom:25px;
+}
+
+.info{
+
+    text-align:left;
+
+    line-height:2;
+
+    margin-bottom:30px;
+}
+
+.edit-btn{
+
+    background:#1F4E79;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 24px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+footer{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:20px;
+
+    background:#0D203B;
+
+    border-top:1px solid #1F3A5F;
+
+    color:#BFC8D6;
+
+    margin-top:40px;
+}
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.back-btn,
+.edit-btn{
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+.back-btn:hover,
+.edit-btn:hover{
+
+    background:#2A659B;
+}
+.profile-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #1F3A5F;
+
+    width:100%;
+}
+
+.profile-row span:first-child{
+
+    color:#BFC8D6;
+
+    font-weight:500;
+}

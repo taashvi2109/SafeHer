@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Officer Profile | SafeHer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='officer_profile.css') }}">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile">
+                O
+            </div>
+
+            <button class="logout-btn"
+                    onclick="window.location.href='/'">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="profile-card">
+
+            <h1>Officer Profile</h1>
+
+            <div class="detail-row">
+
+                <span class="label">Officer ID</span>
+
+                <span>{{ officer[0] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">Officer Name</span>
+
+                <span>{{ officer[1] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">Email</span>
+
+                <span>{{ officer[2] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">Phone Number</span>
+
+                <span>{{ officer[3] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">Police Station</span>
+
+                <span>{{ officer[4] }}</span>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="back-btn"
+                        onclick="window.location.href='/officerdashboard'">
+
+                    ← Back to Dashboard
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

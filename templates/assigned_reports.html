@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assigned Reports | SafeHer</title>
+
+    <link rel="stylesheet"  href="{{ url_for('static', filename='assigned_reports.css') }}">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile">
+                O
+            </div>
+
+            <button class="logout-btn">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <h1>Assigned Reports</h1>
+
+        <p class="subtitle">
+            Review and resolve assigned complaints.
+        </p>
+
+        <div class="top-buttons">
+
+    <button class="back-btn"
+            onclick="window.location.href='/officerdashboard'">
+
+        ← Back to Dashboard
+
+    </button>
+
+</div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    
+
+<tr>
+
+    <th>Report ID</th>
+
+    <th>User</th>
+
+    <th>Incident Type</th>
+
+    <th>Date</th>
+
+    <th>Action</th>
+
+</tr>
+
+</thead>
+
+              
+<tbody>
+
+{% for report in reports %}
+
+<tr>
+
+    <td>{{ report[0] }}</td>
+
+    <td>User {{ report[1] }}</td>
+
+    <td>{{ report[2] }}</td>
+
+    <td>{{ report[3] }}</td>
+
+    <td>
+
+        <button class="view-btn"
+                onclick="window.location.href='/viewreport/{{ report[0] }}'">
+
+            View
+
+        </button>
+
+        {% if report[4] != 'Resolved' %}
+
+        <button class="resolve-btn"
+                onclick="window.location.href='/resolvereport/{{ report[0] }}'">
+
+            Resolve
+
+        </button>
+
+        {% else %}
+
+        <span class="resolved-text">
+
+            ✓ Resolved
+
+        </span>
+
+        {% endif %}
+
+    </td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        SafeHer © 2026 | Empowering Women Through Technology
+
+    </footer>
+
+</body>
+
+</html>

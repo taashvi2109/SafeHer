@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#07152A;
+    color:white;
+    min-height:100vh;
+}
+
+.page{
+    padding:40px 60px;
+}
+
+.logo{
+    font-size:72px;
+    font-weight:bold;
+    margin-bottom:15px;
+    animation:fadeIn 1s ease;
+}
+
+.quote{
+    font-size:22px;
+    color:#BFC8D6;
+    margin-bottom:50px;
+}
+
+.container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:50px;
+}
+
+/* LOGIN CARD */
+
+.login-card{
+    width:600px;
+    background:#0D203B;
+    padding:35px;
+    border-radius:18px;
+    border:1px solid #1F3A5F;
+}
+
+.login-card h2{
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+.login-card input{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:10px;
+    background:#142A4A;
+    color:white;
+    font-size:16px;
+}
+
+.login-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#1F4E79;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    margin-top:5px;
+}
+
+.login-btn:hover{
+    background:#2A659B;
+}
+
+.register-text{
+    margin-top:20px;
+    color:#BFC8D6;
+}
+
+.register-text a{
+    color:#69A7FF;
+    text-decoration:none;
+}
+
+.register-text a:hover{
+    text-decoration:underline;
+}
+
+/* SOS CARD */
+
+.sos-card{
+    width:420px;
+    background:#0D203B;
+    padding:35px;
+    border-radius:18px;
+    border:1px solid #1F3A5F;
+    text-align:center;
+}
+
+.sos-card h2{
+    margin-bottom:20px;
+    font-size:34px;
+}
+
+.sos-desc{
+    color:#BFC8D6;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.sos-card input{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:10px;
+    background:#142A4A;
+    color:white;
+    font-size:16px;
+}
+
+/* SOS BUTTON */
+
+.sos-btn{
+
+    width:180px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#E63946;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    margin-top:20px;
+
+    box-shadow:0 0 20px rgba(230,57,70,0.6);
+
+    transition:0.3s;
+}
+
+.sos-btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 35px rgba(230,57,70,0.9);
+}
+
+.password-wrapper{
+
+    position:relative;
+}
+
+.toggle-password{
+
+    position:absolute;
+
+    right:15px;
+
+    top:15px;
+
+    cursor:pointer;
+
+    color:#BFC8D6;
+}
+
+input:focus{
+
+    outline:none;
+
+    border:1px solid #3B82F6;
+
+    box-shadow:0 0 12px rgba(59,130,246,.4);
+}
+
+.login-card,
+.sos-card{
+
+    transition:.3s;
+}
+
+.login-card:hover,
+.sos-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px rgba(31,78,121,.4);
+}
+
+footer{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#AFC1D6;
+
+    border-top:1px solid #1F3A5F;
+}
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

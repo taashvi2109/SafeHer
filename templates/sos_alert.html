@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SOS Alerts | SafeHer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='sos_alert.css') }}">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile">
+                A
+            </div>
+
+            <button class="logout-btn"
+                    onclick="window.location.href='/'">
+
+                Logout
+
+            </button>
+{% if active_sos > 0 %}
+
+<div class="sos-badge"
+     onclick="window.location.href='/sosalerts'">
+
+    🚨 {{ active_sos }}
+
+</div>
+
+{% endif %}
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <h1>SOS Alerts</h1>
+
+        <p class="subtitle">
+            Monitor emergency alerts raised by users.
+        </p>
+
+        <button class="back-btn"
+                onclick="window.location.href='/admindashboard'">
+
+            ← Back to Dashboard
+
+        </button>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Alert ID</th>
+                        <th>Phone Number</th>
+                        <th>Location</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+{% for alert in alerts %}
+
+<tr>
+
+    <td>SOS-{{ alert[0] }}</td>
+
+    <td>{{ alert[1] }}</td>
+
+    <td>{{ alert[2] }}</td>
+
+    <td>{{ alert[3] }}</td>
+
+    <td>{{ alert[4] }}</td>
+
+    <td>
+
+        {% if alert[4] == 'Resolved' %}
+
+            <span class="resolved">
+                ✓ Resolved
+            </span>
+
+        {% else %}
+
+            <a href="{{ url_for('resolvesos', alert_id=alert[0]) }}"
+               class="resolve-btn">
+
+                Resolve
+
+            </a>
+
+        {% endif %}
+
+    </td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

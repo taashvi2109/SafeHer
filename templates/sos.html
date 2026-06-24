@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOS Sent | SafeHer</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='sos.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="logo">SafeHer</h1>
+
+        <div class="success-card">
+
+            <div class="icon">
+                🚨
+            </div>
+
+            <h2>SOS Alert Sent</h2>
+
+            <p class="message">
+
+                Don't worry.
+
+                Your emergency alert has been sent successfully.
+
+                Nearby authorities have been notified and
+                assistance will be provided shortly.
+
+            </p>
+
+           <div class="ref-id">
+                Reference ID : SOS-2026-{{ alert_id }}
+            </div>
+
+           <button class="dashboard-btn"
+                    onclick="window.location.href='/'">
+                    Back to Home
+            </button>
+
+        </div>
+             <!-- FOOTER -->
+
+             <footer>
+               SafeHer © 2026 | Empowering Women Through Technology
+              </footer>
+
+        
+
+    
+
+</body>
+
+</html>

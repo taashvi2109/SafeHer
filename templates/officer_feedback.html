@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Admin Feedback | SafeHer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='view_feedback.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="logo">
+        SafeHer
+    </div>
+
+</div>
+
+<div class="container">
+
+    <h1>User Feedback</h1>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Feedback ID</th>
+                <th>User Name</th>
+                <th>Rating</th>
+                <th>Comments</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for f in feedbacks %}
+
+            <tr>
+
+                <td>{{ f[0] }}</td>
+
+                <td>{{ f[1] }}</td>
+
+                <td>{{ f[2] }}/5</td>
+
+                <td>{{ f[3] }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+     <button class="back-btn"
+            onclick="window.location.href='/officerdashboard'">
+
+        Back to Dashboard
+
+    </button>
+
+</div>
+
+</body>
+</html>

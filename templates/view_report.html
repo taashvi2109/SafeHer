@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Report | SafeHer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='view_report.css') }}">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile">
+                O
+            </div>
+
+            <button class="logout-btn"
+                    onclick="window.location.href='/'">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="report-card">
+
+            <h1>Report Details</h1>
+
+            <div class="detail-row">
+
+                <span class="label">Report ID</span>
+
+                <span>{{ report[0] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">User ID</span>
+
+                <span>{{ report[1] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">Incident Type</span>
+
+                <span>{{ report[2] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">Description</span>
+
+                <span>{{ report[3] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">Location</span>
+
+                <span>{{ report[4] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">Date</span>
+
+                <span>{{ report[5] }}</span>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span class="label">Status</span>
+
+                <span>{{ report[6] }}</span>
+
+            </div>
+
+           <div class="buttons">
+
+    <button class="back-btn"
+            onclick="window.location.href='/assignedreports'">
+
+        ← Assigned Reports
+
+    </button>
+
+    <button class="dashboard-btn"
+            onclick="window.location.href='/officerdashboard'">
+
+        Dashboard
+
+    </button>
+
+</div>
+        
+
+    </div>
+
+</body>
+
+</html>

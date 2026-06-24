@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | SafeHer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='admin_dashboard.css') }}">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile">
+                A
+            </div>
+
+            <button class="logout-btn"
+                    onclick="window.location.href='/'">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h3>Admin Panel</h3>
+
+           <button class="side-btn"
+        onclick="window.location.href='/manageofficers'">
+
+    👮 Manage Officers
+
+</button>
+<button class="side-btn"
+        onclick="window.location.href='/manageusers'">
+
+   👤 Manage Users
+
+</button>
+
+<button class="side-btn"
+        onclick="window.location.href='/allreports'">
+
+      📋 All Reports
+
+</button>
+            
+
+          <button class="side-btn"
+        onclick="window.location.href='/sosalerts'">
+
+    🚨 SOS Alerts
+
+</button>  
+
+            
+<button class="side-btn"
+        onclick="window.location.href='/adminfeedback'">
+
+    ⭐ View Feedback
+
+</button>
+        </div>
+
+        <!-- MAIN CONTENT -->
+
+        <div class="main-content">
+
+           <h1>
+    Welcome {{ admin_name }}
+</h1>
+
+            <p class="quote">
+                "Monitor, manage and secure the entire SafeHer platform."
+            </p>
+
+            <!-- STATS -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <h2>{{ total_users }}</h2>
+
+                    <p>Total Users</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2>{{ total_officers }}</h2>
+
+                    <p>Total Officers</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2>{{ total_reports }}</h2>
+
+                    <p>Total Reports</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2>{{ pending_reports }}</h2>
+
+                    <p>Pending Reports</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2>{{ resolved_reports }}</h2>
+
+                    <p>Resolved Reports</p>
+
+                </div>
+<div class="stat-card sos-card {% if active_sos > 0 %}blink{% endif %}"
+     onclick="window.location.href='/sosalerts'"
+     style="cursor:pointer;">
+
+    <h2>{{ active_sos }}</h2>
+
+    <p>🚨 Active SOS Alerts</p>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

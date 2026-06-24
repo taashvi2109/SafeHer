@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident | SafeHer</title>
+
+   <link rel="stylesheet"
+        href="{{ url_for('static', filename='report_incident.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+                   <div class="profile"
+     onclick="window.location.href='/profile'">
+
+    {{ first_letter }}
+
+</div>
+
+            <button class="logout-btn"
+        onclick="window.location.href='/'">
+
+    Logout
+
+</button>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div class="container">
+
+        <h1>Report an Incident</h1>
+
+        <p class="quote">
+            Help us understand what happened so appropriate action can be taken.
+        </p>
+
+        <div class="form-card">
+                    <form method ='Post'>
+                        <label>Incident Type</label>         
+
+   <select name="incident_type" required>
+
+    <option value="" disabled selected>
+        Select Incident Type
+    </option>
+
+    <option>Harassment</option>
+    <option>Stalking</option>
+    <option>Domestic Violence</option>
+    <option>Cyber Crime</option>
+    <option>Public Misconduct</option>
+    <option>Other</option>
+
+</select>
+            <label>Location</label>
+
+            <input type="text"
+                    name="location"
+                    placeholder="Enter incident location"
+                    required>
+   
+            <label>Description</label>
+
+            <textarea
+                    name="description"
+                    placeholder="Describe what happened..."
+                    required></textarea>
+
+          <button type="submit"
+                class="submit-btn">
+                Submit Report
+            </button>
+
+</form>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        SafeHer © 2026 | Empowering Women Through Technology
+    </footer>
+
+</body>
+
+</html>

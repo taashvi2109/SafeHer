@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#07152A;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 50px;
+
+    background:#0D203B;
+
+    border-bottom:1px solid #1F3A5F;
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:bold;
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.profile{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#1F4E79;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+}
+
+.logout-btn{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+/* SUCCESS SECTION */
+
+.success-container{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+}
+
+.success-card{
+
+    width:700px;
+
+    background:#0D203B;
+
+    border:1px solid #1F3A5F;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    text-align:center;
+}
+
+.tick{
+
+    font-size:70px;
+
+    color:#4CAF50;
+
+    margin-bottom:20px;
+}
+
+.success-card h1{
+
+    margin-bottom:20px;
+}
+
+.message{
+
+    color:#BFC8D6;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+}
+
+.report-id{
+
+    font-size:20px;
+
+    margin-bottom:30px;
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+}
+
+.status-btn,
+.dashboard-btn{
+
+    padding:15px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.status-btn:hover,
+.dashboard-btn:hover{
+
+    background:#2A659B;
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:15px;
+
+    background:#0D203B;
+
+    border-top:1px solid #1F3A5F;
+
+    color:#BFC8D6;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Successful | SafeHer</title>
+
+ <link rel="stylesheet"  href="{{ url_for('static', filename='register_success.css') }}">
+
+</head>
+
+<body>
+
+    <div class="success-container">
+
+        <div class="success-card">
+
+            <div class="tick">
+                ✓
+            </div>
+
+            <h1>Registration Successful</h1>
+
+            <p class="message">
+
+                Welcome to SafeHer!
+
+                Your account has been created successfully.
+
+                Please login to continue.
+
+            </p>
+
+            <div class="btn-group">
+
+                <button class="login-btn"
+        onclick="window.location.href='/userlogin'">
+
+    Login Now
+
+</button>
+
+<button class="home-btn"
+        onclick="window.location.href='/'">
+
+    Back to Home
+
+</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        SafeHer © 2026 | Empowering Women Through Technology
+
+    </footer>
+
+</body>
+
+</html>

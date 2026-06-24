@@ -1,0 +1,249 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#07152A;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+    background:#0D203B;
+
+    border-bottom:1px solid #1F3A5F;
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:bold;
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.profile{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#1F4E79;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+}
+
+.logout-btn{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+/* MAIN */
+
+.container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:50px 20px;
+}
+.edit-card{
+
+    width:800px;
+
+    background:#0D203B;
+
+    border:1px solid #1F3A5F;
+
+    border-radius:22px;
+
+    padding:45px;
+
+    box-shadow:0 0 30px rgba(0,0,0,.25);
+}
+
+.edit-card h1{
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    color:#BFC8D6;
+
+    margin-bottom:25px;
+}
+
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    margin-top:18px;
+
+    font-weight:600;
+
+    color:#D7E3F4;
+}
+input,
+textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid transparent;
+
+    border-radius:12px;
+
+    background:#142A4A;
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    border:1px solid #3B82F6;
+
+    box-shadow:0 0 15px rgba(59,130,246,.3);
+}
+
+textarea{
+
+    resize:none;
+}
+
+.btn-group{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+}
+
+.save-btn{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        135deg,
+        #1F4E79,
+        #2A659B
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.save-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 20px rgba(42,101,155,.5);
+}
+
+
+.back-btn{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        135deg,
+        #1F4E79,
+        #2A659B
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 20px rgba(42,101,155,.5);
+}
+
+
+

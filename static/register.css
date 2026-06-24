@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#07152A;
+    color:white;
+}
+
+.page{
+    width:100%;
+    padding:40px;
+}
+
+.logo{
+    text-align:center;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.quote{
+    text-align:center;
+    color:#BFC8D6;
+    margin-bottom:40px;
+    font-size:13px;
+}
+
+.register-card{
+
+    width:500px;
+
+    margin:auto;
+
+    background:#0D203B;
+
+    border:1px solid #1F3A5F;
+
+    border-radius:20px;
+
+    padding:20px 35px 20px 35px;
+}
+
+.register-card h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#142A4A;
+
+    color:white;
+
+    font-size:14px;
+}
+
+textarea{
+
+    resize:none;
+
+    height:50px;
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#9CA8BC;
+}
+
+.register-btn{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.register-btn:hover{
+
+    background:#2A659B;
+}
+
+.login-text{
+
+    text-align:center;
+
+    margin-top:15px;
+}
+
+.login-text a{
+
+    color:#64B5F6;
+
+    text-decoration:none;
+}
+.password-box{
+
+    position:relative;
+    width:100%;
+}
+
+.password-box input{
+
+    width:100%;
+}
+
+.eye{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    font-size:18px;
+}

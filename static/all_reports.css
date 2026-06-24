@@ -1,0 +1,276 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#07152A;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 50px;
+
+    background:#0D203B;
+
+    border-bottom:1px solid #1F3A5F;
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:bold;
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.profile{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#1F4E79;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+}
+
+.logout-btn{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.logout-btn:hover{
+
+    background:#2A659B;
+}
+
+/* MAIN CONTENT */
+
+.container{
+
+    flex:1;
+
+    padding:40px 60px;
+}
+
+.container h1{
+
+    margin-bottom:10px;
+
+    font-size:42px;
+}
+
+.subtitle{
+
+    color:#AFC1D6;
+
+    margin-bottom:25px;
+}
+
+/* BUTTONS */
+
+.back-btn{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+
+    margin-bottom:25px;
+}
+
+.back-btn:hover{
+
+    background:#2A659B;
+}
+
+.view-btn{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.view-btn:hover{
+
+    background:#2A659B;
+}
+
+/* TABLE */
+
+.table-container{
+
+    background:#0D203B;
+
+    border:1px solid #1F3A5F;
+
+    border-radius:15px;
+
+    overflow:hidden;
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+th{
+
+    background:#142A4A;
+
+    padding:18px;
+
+    text-align:left;
+}
+
+td{
+
+    padding:18px;
+
+    border-top:1px solid #1F3A5F;
+}
+
+/* STATUS */
+
+.pending{
+
+    background:#D4A017;
+
+    color:black;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+}
+
+.assigned{
+
+    background:#1F4E79;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+}
+
+.resolved{
+
+    background:#339b60;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:15px;
+
+    background:#0D203B;
+
+    border-top:1px solid #1F3A5F;
+
+    color:#BFC8D6;
+}
+.sos-badge{
+
+    background:#ff0000;
+
+    color:white;
+
+    padding:10px 15px;
+
+    border-radius:25px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    animation:sosBlink 1s infinite;
+}
+
+@keyframes sosBlink{
+
+    0%{
+        box-shadow:0 0 5px red;
+    }
+
+    50%{
+        box-shadow:0 0 20px red;
+    }
+
+    100%{
+        box-shadow:0 0 5px red;
+    }
+}

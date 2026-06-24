@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#07152A;
+    color:white;
+    min-height:100vh;
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 50px;
+
+    background:#0D203B;
+
+    border-bottom:1px solid #1F3A5F;
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:bold;
+}
+
+.nav-right{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+}
+
+.profile{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#1F4E79;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+}
+
+.logout-btn{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.container{
+
+    padding:40px 60px;
+}
+
+.container h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    color:#AFC1D6;
+
+    margin-bottom:20px;
+}
+
+.back-btn{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F4E79;
+
+    color:white;
+
+    cursor:pointer;
+
+    margin-bottom:25px;
+}
+
+.table-container{
+
+    background:#0D203B;
+
+    border:1px solid #1F3A5F;
+
+    border-radius:15px;
+
+    overflow:hidden;
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+th{
+
+    background:#142A4A;
+
+    padding:18px;
+
+    text-align:left;
+}
+
+td{
+
+    padding:18px;
+
+    border-top:1px solid #1F3A5F;
+}

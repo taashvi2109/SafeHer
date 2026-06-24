@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeHer Dashboard</title>
+ <link rel="stylesheet"  href="{{ url_for('static', filename='officer_dashboard.css') }}">
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile"
+            onclick="window.location.href='/officerprofile'">
+                  {{ officer_name[0] }}
+            </div>
+
+            <button class="logout-btn"
+                    onclick="window.location.href='/'">
+                    Logout
+            </button>
+        </div>
+
+    </div>
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h3>Officer Panel</h3>
+
+       <button class="side-btn"
+        onclick="window.location.href='/assignedreports'">
+        📋 Assigned Reports
+        </button>
+
+        <button class="side-btn"
+        onclick="window.location.href='/viewusers'">
+
+    👤 View User Details
+
+</button>
+
+       <button class="side-btn"
+        onclick="window.location.href='/officerfeedback'">
+
+    ⭐ View Feedback
+
+</button>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main-content">
+
+        <h1>Welcome Officer {{ officer_name }}</h1>
+
+        <p class="quote">
+            "Every report handled responsibly contributes to a safer community."
+        </p>
+
+        <!-- STATS -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h2>{{ total_reports }}</h2>
+                <p>Assigned Reports</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>{{ inprogress_reports }}</h2>
+                <p>In Progress</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>{{ resolved_reports }}</h2>
+                <p>Resolved</p>
+            </div>
+
+        </div>
+
+        <!-- REPORT TABLE -->
+
+        <h2 class="table-title">
+            Recent Assigned Reports
+        </h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Report ID</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                
+
+                    <tbody>
+
+                    {% for report in reports %}
+
+                        <tr>
+
+                             <td>{{ report[0] }}</td>
+
+                            <td>{{ report[1] }}</td>
+
+                            <td>{{ report[2] }}</td>
+
+                            <td>
+
+                            {% if report[3] == 'Pending' %}
+                             <span class="pending">{{ report[3] }}</span>
+
+                            {% elif report[3] == 'Resolved' %}
+                            <span class="resolved">{{ report[3] }}</span>
+
+                            {% else %}
+                            <span class="assigned">{{ report[3] }}</span>
+                            {% endif %}
+
+                        </td>
+
+    <td>
+
+        <button class="view-btn"
+                onclick="window.location.href='/viewreport/{{ report[0] }}'">
+                View
+        </button>
+
+    </td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

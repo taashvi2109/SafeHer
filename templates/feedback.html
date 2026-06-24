@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | SafeHer</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='feedback.css') }}">
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+                   <div class="profile"
+     onclick="window.location.href='/profile'">
+
+    {{ first_letter }}
+
+</div>
+           <button class="logout-btn"
+        onclick="window.location.href='/'">
+
+    Logout
+
+</button>
+
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="feedback-card">
+
+    <h1>Give Feedback</h1>
+
+    <p class="subtitle">
+        Help us improve the platform by sharing your experience.
+    </p>
+
+    <form method="POST">
+
+        <label>Rating</label>
+
+        <select name="rating" required>
+            <option value="">Select Rating</option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+
+        <label>Feedback</label>
+
+        <textarea
+            name="comments"
+            placeholder="Write your feedback here..."
+            required></textarea>
+
+        <button type="submit" class="submit-btn">
+            Submit Feedback
+        </button>
+
+    </form>
+
+</div>
+
+    </div>
+
+    <footer>
+        SafeHer © 2026 | Empowering Women Through Technology
+    </footer>
+
+</body>
+
+</html>

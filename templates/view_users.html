@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Users | SafeHer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='view_users.css') }}">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile">
+                O
+            </div>
+
+            <button class="logout-btn"
+                    onclick="window.location.href='/'">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <h1>Registered Users</h1>
+
+        <p class="subtitle">
+            View all users registered on the SafeHer platform.
+        </p>
+
+        <button class="back-btn"
+                onclick="window.location.href='/officerdashboard'">
+
+            ← Back to Dashboard
+
+        </button>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>User ID</th>
+
+                        <th>Full Name</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Address</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for user in users %}
+
+                    <tr>
+
+                        <td>{{ user[0] }}</td>
+
+                        <td>{{ user[1] }}</td>
+
+                        <td>{{ user[2] }}</td>
+
+                        <td>{{ user[3] }}</td>
+
+                        <td>{{ user[4] }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

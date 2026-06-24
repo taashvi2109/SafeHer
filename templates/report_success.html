@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Submitted | SafeHer</title>
+
+    <link rel="stylesheet"href="{{ url_for('static', filename='report_success.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile"
+                onclick="window.location.href='profile.html'">
+                 T
+            </div>
+
+            <button class="logout-btn"
+                onclick="window.location.href='index.html'">
+                Logout
+                </button>
+
+        </div>
+
+    </div>
+
+    <!-- SUCCESS SECTION -->
+
+    <div class="success-container">
+
+        <div class="success-card">
+
+            <div class="tick">
+                ✓
+            </div>
+
+            <h1>Report Submitted Successfully</h1>
+
+            <p class="message">
+                Your complaint has been registered successfully.
+                Our team will review the report and take appropriate action.
+            </p>
+
+            <div class="report-id">
+                 Report ID : <strong>SH-2026-{{ report_id }}</strong>
+            </div>
+
+            <div class="buttons">
+
+                <button class="status-btn"
+                        onclick="window.location.href='/reportstatus'">
+                         View Report Status
+                </button>   
+
+                <button class="dashboard-btn"
+                        onclick="window.location.href='/dashboard'">
+                        Back to Dashboard
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        SafeHer © 2026 | Empowering Women Through Technology
+    </footer>
+
+</body>
+
+</html>

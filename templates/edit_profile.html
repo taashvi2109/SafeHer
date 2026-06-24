@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile | SafeHer</title>
+
+     <link rel="stylesheet"  href="{{ url_for('static', filename='edit_profile.css') }}">
+</head>
+
+<body>
+
+    
+    <!-- MAIN CONTENT -->
+
+    <div class="container">
+
+        <div class="edit-card">
+
+            <h1>Edit Profile</h1>
+
+            <p class="subtitle">
+                Update your personal information.
+            </p>
+
+
+         <form method="POST">
+                <label>Full Name</label>
+<input type="text"
+       name="full_name"
+       value="{{ user[0] }}">
+
+<label>Phone Number</label>
+<input type="text"
+       name="phone"
+       value="{{ user[1] }}">
+
+<label>Email Address</label>
+<input type="email"
+       name="email"
+       value="{{ user[2] }}">
+
+<label>Date of Birth</label>
+<input type="date"
+       name="dob"
+       value="{{ user[3] }}">
+
+<label>Address</label>
+<textarea name="address"
+          rows="4">{{ user[4] }}</textarea>
+
+                <div class="btn-group">
+
+                    <button type="submit" class="save-btn">
+                        Save Changes
+
+                   <button type="button"
+        class="back-btn"
+        onclick="window.location.href='/dashboard'">
+
+    ← Dashboard
+
+</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+   
+</body>
+
+</html>

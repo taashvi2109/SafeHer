@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeHer - User Login</title>
+
+     <link rel="stylesheet"  href="{{ url_for('static', filename='user_login.css') }}">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <h1 class="logo">SafeHer</h1>
+
+        <p class="quote">
+            Empowering women through rapid emergency assistance and secure incident reporting.
+        </p>
+
+        <div class="container">
+
+            <!-- LOGIN CARD -->
+
+            <div class="login-card">
+
+                <form method="POST">
+
+                        <h2>Login</h2>
+
+                         <input type="email"
+                                 name="email"
+                                placeholder="Email Address"
+                                required>
+
+                       <div class="password-wrapper">
+
+    <input type="password"
+           id="password"
+           name="password"
+           placeholder="Password"
+           required>
+
+    <span class="toggle-password"
+          onclick="togglePassword()">
+
+        👁
+
+    </span>
+
+</div>
+
+                        <button type="submit"
+                                 class="login-btn">
+                                Login
+                         </button>
+
+                </form>
+
+                <p class="register-text">
+                    Don't have an account?
+                    <a href="/register">Register</a>
+                </p>
+
+            </div>
+
+            <!-- SOS CARD -->
+
+           <div class="sos-card">
+
+    <form method="POST"
+      action="/sos"
+      onsubmit="return confirmSOS()">
+
+        <h2>🚨 Emergency SOS</h2>
+
+        <p class="sos-desc">
+            Need immediate assistance? Enter your phone number and location to send an emergency alert.
+        </p>
+
+        <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            required>
+
+        <input
+            type="text"
+            name="location"
+            placeholder="Current Location"
+            required>
+
+        <button type="submit" class="sos-btn">
+            SOS
+        </button>
+
+    </form>
+
+</div>
+
+        </div>
+
+    </div>
+<footer>
+
+    SafeHer © 2026 | Empowering Women Through Technology
+
+</footer>
+
+<script>
+
+function togglePassword(){
+
+    let pass = document.getElementById("password");
+
+    if(pass.type === "password"){
+
+        pass.type = "text";
+
+    }else{
+
+        pass.type = "password";
+    }
+}
+
+function confirmSOS(){
+
+    return confirm(
+        "Are you sure you want to send an emergency SOS alert?"
+    );
+}
+
+</script>
+</body>
+</html>

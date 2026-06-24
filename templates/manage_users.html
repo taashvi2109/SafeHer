@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Users | SafeHer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='manage_users.css') }}">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile">
+                A
+            </div>
+
+            <button class="logout-btn"
+                    onclick="window.location.href='/'">
+
+                Logout
+
+            </button>
+{% if active_sos > 0 %}
+
+<div class="sos-badge"
+     onclick="window.location.href='/sosalerts'">
+
+    🚨 {{ active_sos }}
+
+</div>
+
+{% endif %}
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <h1>Manage Users</h1>
+
+        <button class="back-btn"
+                onclick="window.location.href='/admindashboard'">
+
+            ← Back to Dashboard
+
+        </button>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>User ID</th>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Address</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for user in users %}
+
+                    <tr>
+
+                        <td>{{ user[0] }}</td>
+
+                        <td>{{ user[1] }}</td>
+
+                        <td>{{ user[2] }}</td>
+
+                        <td>{{ user[3] }}</td>
+
+                        <td>{{ user[4] }}</td>
+
+                        <td>
+
+                            <button class="delete-btn"
+                                    onclick="window.location.href='/deleteuser/{{ user[0] }}'">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

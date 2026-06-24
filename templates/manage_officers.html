@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Officers | SafeHer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='manage_officers.css') }}">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+            <div class="profile">
+                A
+            </div>
+
+            <button class="logout-btn"
+                    onclick="window.location.href='/'">
+                Logout
+            </button>
+{% if active_sos > 0 %}
+
+<div class="sos-badge"
+     onclick="window.location.href='/sosalerts'">
+
+    🚨 {{ active_sos }}
+
+</div>
+
+{% endif %}
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <h1>Manage Officers</h1>
+
+        <button class="back-btn"
+                onclick="window.location.href='/admindashboard'">
+
+            ← Back to Dashboard
+
+        </button>
+
+        <!-- ADD OFFICER -->
+
+        <div class="form-card">
+
+            <h2>Add New Officer</h2>
+
+            <form method="POST">
+
+                <input type="text"
+                       name="officer_name"
+                       placeholder="Officer Name"
+                       required>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Email"
+                       required>
+
+                <input type="text"
+                       name="phone"
+                       placeholder="Phone Number"
+                       required>
+
+                <input type="text"
+                       name="station_name"
+                       placeholder="Police Station"
+                       required>
+
+                <input type="password"
+                       name="password"
+                       placeholder="Password"
+                       required>
+
+                <button type="submit"
+                        class="add-btn">
+
+                    Add Officer
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- OFFICERS TABLE -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Station</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for officer in officers %}
+
+                    <tr>
+
+                        <td>{{ officer[0] }}</td>
+
+                        <td>{{ officer[1] }}</td>
+
+                        <td>{{ officer[2] }}</td>
+
+                        <td>{{ officer[3] }}</td>
+
+                        <td>{{ officer[4] }}</td>
+
+                        <td>
+
+                            <button class="delete-btn"
+                                    onclick="window.location.href='/deleteofficer/{{ officer[0] }}'">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

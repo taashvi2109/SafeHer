@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SafeHer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left-section">
+
+            <h1>SafeHer</h1>
+
+            <h2 id="typing"></h2>
+
+            <p class="fade-text">
+                Because every woman deserves to feel safe,
+                anytime and anywhere.
+            </p>
+
+            <div class="helpline">
+
+                <h3>Emergency Helpline Numbers</h3>
+
+                <div class="line">
+                    <span>Women Helpline</span>
+                    <span>181</span>
+                </div>
+
+                <div class="line">
+                    <span>Police Emergency</span>
+                    <span>112</span>
+                </div>
+
+                <div class="line">
+                    <span>Women Police</span>
+                    <span>1091</span>
+                </div>
+
+                <div class="line">
+                    <span>Child Helpline</span>
+                    <span>1098</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="right-section">
+
+            <div class="role-card">
+
+                <h2>Select Your Role</h2>
+
+                <a href="/userlogin">
+                    <button>User</button>
+                </a>
+
+                <a href="/officerlogin">
+                    <button>Officer</button>
+                </a>
+
+                <a href="/adminlogin">
+                    <button>Admin</button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script>
+
+const text = "YOUR SAFETY, OUR PRIORITY";
+
+let i = 0;
+
+function typeWriter(){
+
+    if(i < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,80);
+    }
+}
+
+window.onload = typeWriter;
+
+</script>
+
+</body>
+
+</html>

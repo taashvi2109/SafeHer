@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+href="{{ url_for('static', filename='report_status.css') }}">
+<title>View Report Status | SafeHer</title>
+
+
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            SafeHer
+        </div>
+
+        <div class="nav-right">
+
+                   <div class="profile"
+     onclick="window.location.href='/profile'">
+
+    {{ first_letter }}
+
+</div>
+            <button class="logout-btn"
+        onclick="window.location.href='/'">
+
+    Logout
+
+</button>
+
+
+        </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div class="container">
+
+    <h1>My Reports</h1>
+
+    <p class="subtitle">
+        Track the status of your submitted complaints.
+    </p>
+
+    <div class="table-container">
+
+<table>
+
+    <thead>
+<tr>
+    <th>Report ID</th>
+    <th>Incident Type</th>
+    <th>Date Reported</th>
+    <th>Status</th>
+    <th>Assigned Officer</th>
+</tr>
+
+    </thead>
+
+    <tbody>
+
+        {% for report in reports %}
+
+        <tr>
+
+    <td>SH-2026-{{ report[0] }}</td>
+
+    <td>{{ report[1] }}</td>
+
+    <td>{{ report[2] }}</td>
+
+    <td>
+
+        {% if report[3] == 'Pending' %}
+
+            <span class="pending">
+                {{ report[3] }}
+            </span>
+
+        {% elif report[3] == 'Resolved' %}
+
+            <span class="resolved">
+                {{ report[3] }}
+            </span>
+
+        {% else %}
+
+            <span class="assigned">
+                {{ report[3] }}
+            </span>
+
+        {% endif %}
+
+    </td>
+
+    <td>
+
+        {% if report[4] %}
+
+            {{ report[4] }}
+
+        {% else %}
+
+            Not Assigned
+
+        {% endif %}
+
+    </td>
+
+</tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+
+    </div>
+
+</div>
+
+     
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        SafeHer © 2026 | Empowering Women Through Technology
+    </footer>
+
+</body>
+
+</html>
