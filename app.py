@@ -8,11 +8,11 @@ app.secret_key = "safeher123"
 
 # MySQL Connection
 db = mysql.connector.connect(
-    host="localhost",
-    port=3307,
+    host="acela.proxy.rlwy.net",
+    port=16627,
     user="root",
-    password="mysql@t_12",
-    database="safeher"
+    password="ksEijKHcrDaplgCPDABNTjYUrYiMzeAV",
+    database="railway"
 )
 
 cursor = db.cursor()
