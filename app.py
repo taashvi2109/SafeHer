@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 import mysql.connector
+import os
 
 app = Flask(__name__)
 
@@ -8,11 +9,11 @@ app.secret_key = "safeher123"
 
 # MySQL Connection
 db = mysql.connector.connect(
-    host="acela.proxy.rlwy.net",
-    port=16627,
-    user="root",
-    password="ksEijKHcrDaplgCPDABNTjYUrYiMzeAV",
-    database="railway"
+    host=os.getenv("DB_HOST"),
+    port=int(os.getenv("DB_PORT")),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME")
 )
 
 cursor = db.cursor()
